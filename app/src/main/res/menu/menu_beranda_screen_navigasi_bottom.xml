@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mBeranda"
+        android:enabled="true"
+        android:title="Beranda"
+        android:icon="@drawable/icon_beranda" />
+
+    <item
+        android:id="@+id/mkeranjang"
+        android:enabled="true"
+        android:title="Feed"
+        android:icon="@drawable/assets_material_layers_24" />
+
+    <item
+        android:id="@+id/mTokoResmi"
+        android:enabled="true"
+        android:title="Live"
+        android:icon="@drawable/assets_material_live_tv_24" />
+
+    <item
+        android:id="@+id/mChat"
+        android:enabled="true"
+        android:title="Notifikasi"
+        android:icon="@drawable/ic_baseline_notifications_none_24" />
+
+    <item
+        android:id="@+id/mSaya"
+        android:enabled="true"
+        android:title="Saya"
+        android:icon="@drawable/icon_akun" />
+
+</menu>
