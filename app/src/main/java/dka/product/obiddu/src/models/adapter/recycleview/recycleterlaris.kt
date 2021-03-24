@@ -27,13 +27,13 @@ class recycleterlaris(var context : Context) : RecyclerView.Adapter<recycleterla
     }
 
     override fun onBindViewHolder(holder: recycleterlaris.myholder, position: Int) {
-        Glide.with(context)
+        /*Glide.with(context)
             .load( mData[position].gambar)
             .centerCrop()
             .placeholder(R.drawable.placeholder)
             .skipMemoryCache(true)
             .diskCacheStrategy(DiskCacheStrategy.NONE)
-            .into(holder.mbind.gambaritem)
+            .into(holder.mbind.gambaritem)*/
 
         holder.mbind.namaitem.setText(mData[position].nama)
         holder.mbind.namatoko.setText(mData[position].toko)

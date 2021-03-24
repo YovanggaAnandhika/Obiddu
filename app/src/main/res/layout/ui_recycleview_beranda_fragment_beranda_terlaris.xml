@@ -23,12 +23,12 @@
                 android:layout_height="150dp"
                 app:cardCornerRadius="5dp">
 
-                <ImageView
+               <!-- <ImageView
                     android:id="@+id/gambaritem"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/holderplace" />
+                    android:src="@drawable/holderplace" />-->
 
             </androidx.cardview.widget.CardView>
 

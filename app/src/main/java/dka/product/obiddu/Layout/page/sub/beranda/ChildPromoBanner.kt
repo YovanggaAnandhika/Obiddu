@@ -23,19 +23,18 @@ class ChildPromoBanner(context: Context) : Fragment() {
     private lateinit var mBinding : UiActivityBerandaFragmentBerandaRecyclerviewPromobannerBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        super.onCreateView(inflater, container, savedInstanceState)
         mBinding = DataBindingUtil.inflate(inflater, R.layout.ui_activity_beranda_fragment_beranda_recyclerview_promobanner, container, false)
 
-        if (this.urlImage !== null){
-            Glide.with(requireActivity())
+        /*if (this.urlImage !== null){
+            *//*Glide.with(requireActivity())
                 .load(this.urlImage)
                 .centerCrop()
                 .placeholder(R.drawable.placeholder)
                 .centerCrop()
                 .skipMemoryCache(true)
                 .diskCacheStrategy(DiskCacheStrategy.NONE)
-                .into(mBinding.imageView17)
-        }
+                .into(mBinding.imageView17)*//*
+        }*/
 
         return mBinding.root
     }

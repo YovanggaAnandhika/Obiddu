@@ -8,11 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.FragmentManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import dka.product.obiddu.Layout.page.*
 import dka.product.obiddu.R
 import dka.product.obiddu.databinding.UiActivityBerandaScreenBinding
-import dka.product.obiddu.Layout.page.BerandaFragment
-import dka.product.obiddu.Layout.page.KeranjangFragment
-import dka.product.obiddu.Layout.page.SayaFragment
 
 class BerandaActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -48,13 +46,13 @@ class BerandaActivity : AppCompatActivity(), BottomNavigationView.OnNavigationIt
             }
             R.id.mkeranjang -> {
                 fm.beginTransaction()
-                    .replace(mBinding.mContainerLayoutFunction.id, KeranjangFragment())
+                    .replace(mBinding.mContainerLayoutFunction.id, FeedFragment())
                     .commit()
                 true
             }
             R.id.mTokoResmi -> {
                 fm.beginTransaction()
-                    .replace(mBinding.mContainerLayoutFunction.id, BlankFragmentExample())
+                    .replace(mBinding.mContainerLayoutFunction.id, LiveFragment())
                     .commit()
                 true
             }

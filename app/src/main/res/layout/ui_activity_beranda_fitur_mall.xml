@@ -22,25 +22,24 @@
                     android:id="@+id/mTag"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/beranda_gradient_background"
                     android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="15dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="15dp"
                     android:visibility="visible">
 
                     <ImageButton
                         android:id="@+id/imageButton4"
-                        tools:src="@drawable/abc_vector_test"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_gravity="center_vertical"
                         android:background="@null"
                         android:scaleType="fitCenter"
-                        android:tint="#000"
-                        app:srcCompat="@drawable/abc_vector_test" />
+                        android:tint="@color/white"
+                        app:srcCompat="@drawable/abc_vector_test"
+                        tools:src="@drawable/abc_vector_test" />
 
                     <TextView
                         android:id="@+id/textView"
@@ -52,6 +51,7 @@
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
                         android:text="Obiddu Mall"
+                        android:textColor="@color/white"
                         android:textSize="24sp" />
 
                     <ImageButton
@@ -60,7 +60,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:background="@null"
-                        android:tint="#000"
+                        android:tint="@color/white"
                         app:srcCompat="@drawable/icon_keranjang"
                         tools:ignore="VectorDrawableCompat" />
 
@@ -72,6 +72,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginStart="10dp"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="10dp"
@@ -86,7 +87,6 @@
 
                         <ImageButton
                             android:id="@+id/imageButton"
-                            tools:ignore="VectorDrawableCompat"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:layout_gravity="center_vertical"
@@ -94,7 +94,8 @@
                             android:layout_marginLeft="8dp"
                             android:background="@null"
                             android:scaleType="centerInside"
-                            app:srcCompat="@drawable/loupe" />
+                            app:srcCompat="@drawable/loupe"
+                            tools:ignore="VectorDrawableCompat" />
 
                         <EditText
                             android:id="@+id/editTextTextPersonName"
@@ -125,8 +126,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="10dp"
-                        android:fontFamily="@font/adamina"
-                        android:text="Top Category" />
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Top Category"
+                        android:textColor="@color/primarycolor" />
 
                     <Space
                         android:layout_width="match_parent"
@@ -151,6 +153,7 @@
                                 android:layout_height="70dp"
                                 android:layout_marginEnd="10dp"
                                 android:layout_marginRight="10dp"
+                                app:cardBackgroundColor="@color/primarycolor"
                                 app:cardCornerRadius="10dp" />
 
                             <androidx.cardview.widget.CardView
@@ -158,6 +161,7 @@
                                 android:layout_height="70dp"
                                 android:layout_marginEnd="10dp"
                                 android:layout_marginRight="10dp"
+                                app:cardBackgroundColor="@color/primarycolor"
                                 app:cardCornerRadius="10dp" />
 
                             <androidx.cardview.widget.CardView
@@ -165,6 +169,7 @@
                                 android:layout_height="70dp"
                                 android:layout_marginEnd="10dp"
                                 android:layout_marginRight="10dp"
+                                app:cardBackgroundColor="@color/primarycolor"
                                 app:cardCornerRadius="10dp">
 
                             </androidx.cardview.widget.CardView>
@@ -174,6 +179,7 @@
                                 android:layout_height="70dp"
                                 android:layout_marginEnd="10dp"
                                 android:layout_marginRight="10dp"
+                                app:cardBackgroundColor="@color/primarycolor"
                                 app:cardCornerRadius="10dp" />
 
                             <androidx.cardview.widget.CardView
@@ -181,6 +187,7 @@
                                 android:layout_height="70dp"
                                 android:layout_marginEnd="10dp"
                                 android:layout_marginRight="10dp"
+                                app:cardBackgroundColor="@color/primarycolor"
                                 app:cardCornerRadius="10dp" />
 
                             <androidx.cardview.widget.CardView
@@ -188,11 +195,13 @@
                                 android:layout_height="70dp"
                                 android:layout_marginEnd="10dp"
                                 android:layout_marginRight="10dp"
+                                app:cardBackgroundColor="@color/primarycolor"
                                 app:cardCornerRadius="10dp" />
 
                             <androidx.cardview.widget.CardView
                                 android:layout_width="70dp"
                                 android:layout_height="70dp"
+                                app:cardBackgroundColor="@color/primarycolor"
                                 app:cardCornerRadius="10dp" />
 
                         </LinearLayout>
@@ -208,7 +217,8 @@
 
                     <com.denzcoskun.imageslider.ImageSlider
                         android:layout_width="match_parent"
-                        android:layout_height="150dp">
+                        android:layout_height="150dp"
+                        android:background="@android:color/darker_gray">
 
                     </com.denzcoskun.imageslider.ImageSlider>
 
@@ -227,8 +237,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="10dp"
-                        android:fontFamily="@font/adamina"
+                        android:fontFamily="sans-serif-medium"
                         android:text="Brand Populer"
+                        android:textColor="@color/primarycolor"
                         android:textSize="14sp" />
 
                     <HorizontalScrollView
@@ -250,7 +261,7 @@
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="150dp"
                                     android:layout_height="80dp"
-                                    app:cardBackgroundColor="#F1EDED"
+                                    app:cardBackgroundColor="#F6F5F5"
                                     app:cardCornerRadius="10dp">
 
                                 </androidx.cardview.widget.CardView>
@@ -262,7 +273,7 @@
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="150dp"
                                     android:layout_height="80dp"
-                                    app:cardBackgroundColor="#F1EDED"
+                                    app:cardBackgroundColor="#F6F5F5"
                                     app:cardCornerRadius="10dp" />
                             </LinearLayout>
 
@@ -279,7 +290,7 @@
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="150dp"
                                     android:layout_height="80dp"
-                                    app:cardBackgroundColor="#F1EDED"
+                                    app:cardBackgroundColor="#F6F5F5"
                                     app:cardCornerRadius="10dp">
 
                                 </androidx.cardview.widget.CardView>
@@ -291,7 +302,7 @@
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="150dp"
                                     android:layout_height="80dp"
-                                    app:cardBackgroundColor="#F1EDED"
+                                    app:cardBackgroundColor="#F6F5F5"
                                     app:cardCornerRadius="10dp" />
                             </LinearLayout>
 
@@ -308,7 +319,7 @@
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="150dp"
                                     android:layout_height="80dp"
-                                    app:cardBackgroundColor="#F1EDED"
+                                    app:cardBackgroundColor="#F6F5F5"
                                     app:cardCornerRadius="10dp">
 
                                 </androidx.cardview.widget.CardView>
@@ -320,7 +331,7 @@
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="150dp"
                                     android:layout_height="80dp"
-                                    app:cardBackgroundColor="#F1EDED"
+                                    app:cardBackgroundColor="#F6F5F5"
                                     app:cardCornerRadius="10dp" />
                             </LinearLayout>
 
@@ -337,7 +348,7 @@
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="150dp"
                                     android:layout_height="80dp"
-                                    app:cardBackgroundColor="#F1EDED"
+                                    app:cardBackgroundColor="#F6F5F5"
                                     app:cardCornerRadius="10dp">
 
                                 </androidx.cardview.widget.CardView>
@@ -349,7 +360,7 @@
                                 <androidx.cardview.widget.CardView
                                     android:layout_width="150dp"
                                     android:layout_height="80dp"
-                                    app:cardBackgroundColor="#F1EDED"
+                                    app:cardBackgroundColor="#F6F5F5"
                                     app:cardCornerRadius="10dp" />
                             </LinearLayout>
 
@@ -397,8 +408,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="10dp"
-                        android:fontFamily="@font/adamina"
-                        android:text="Mall Flash Sale" />
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Mall Flash Sale"
+                        android:textColor="@color/primarycolor" />
 
                     <HorizontalScrollView
                         android:id="@+id/terlaris"
@@ -406,6 +418,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/slide"
                         android:background="#FFFFFF"
+                        android:scrollbarSize="0dp"
                         android:visibility="visible">
 
                         <LinearLayout
@@ -450,16 +463,20 @@
                                             <TextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
+                                                android:layout_below="@id/diskon1"
                                                 android:layout_centerHorizontal="true"
                                                 android:layout_gravity="center_horizontal"
                                                 android:text="off"
+                                                android:textColor="@color/white"
                                                 android:textSize="10sp" />
 
                                             <TextView
+                                                android:id="@+id/diskon1"
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:layout_centerHorizontal="true"
-                                                android:text="56%" />
+                                                android:text="56%"
+                                                android:textColor="@color/white" />
                                         </RelativeLayout>
 
                                     </RelativeLayout>
@@ -513,7 +530,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_weight="10"
                                             android:scaleType="fitXY"
-                                            app:srcCompat="@drawable/sweater" />
+                                            app:srcCompat="@drawable/sepatu" />
 
                                         <RelativeLayout
                                             android:layout_width="35dp"
@@ -527,13 +544,15 @@
                                                 android:layout_centerHorizontal="true"
                                                 android:layout_gravity="center_horizontal"
                                                 android:text="off"
+                                                android:textColor="@color/white"
                                                 android:textSize="10sp" />
 
                                             <TextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:layout_centerHorizontal="true"
-                                                android:text="56%" />
+                                                android:text="56%"
+                                                android:textColor="@color/white" />
                                         </RelativeLayout>
 
                                     </RelativeLayout>
@@ -585,7 +604,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_weight="10"
                                             android:scaleType="fitXY"
-                                            app:srcCompat="@drawable/sweater" />
+                                            app:srcCompat="@drawable/sepeda" />
 
                                         <RelativeLayout
                                             android:layout_width="35dp"
@@ -599,13 +618,15 @@
                                                 android:layout_centerHorizontal="true"
                                                 android:layout_gravity="center_horizontal"
                                                 android:text="off"
+                                                android:textColor="@color/white"
                                                 android:textSize="10sp" />
 
                                             <TextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:layout_centerHorizontal="true"
-                                                android:text="56%" />
+                                                android:text="56%"
+                                                android:textColor="@color/white" />
                                         </RelativeLayout>
 
                                     </RelativeLayout>
@@ -673,13 +694,15 @@
                                                 android:layout_centerHorizontal="true"
                                                 android:layout_gravity="center_horizontal"
                                                 android:text="off"
+                                                android:textColor="@color/white"
                                                 android:textSize="10sp" />
 
                                             <TextView
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:layout_centerHorizontal="true"
-                                                android:text="56%" />
+                                                android:text="56%"
+                                                android:textColor="@color/white" />
                                         </RelativeLayout>
 
                                     </RelativeLayout>
@@ -743,21 +766,21 @@
                                             android:background="@drawable/diskon">
 
                                             <TextView
-                                                android:id="@+id/textView50"
+                                                android:id="@+id/off1"
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
-                                                android:layout_below="@id/textView49"
                                                 android:layout_centerHorizontal="true"
                                                 android:layout_gravity="center_horizontal"
                                                 android:text="off"
+                                                android:textColor="@color/white"
                                                 android:textSize="10sp" />
 
                                             <TextView
-                                                android:id="@+id/textView49"
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
                                                 android:layout_centerHorizontal="true"
-                                                android:text="56%" />
+                                                android:text="56%"
+                                                android:textColor="@color/white" />
                                         </RelativeLayout>
 
                                     </RelativeLayout>
@@ -806,7 +829,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/adamina"
-                        android:text="Kupon Belanja" />
+                        android:text="Kupon Belanja"
+                        android:textColor="@color/primarycolor" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -822,7 +846,8 @@
 
                             <RelativeLayout
                                 android:layout_width="180dp"
-                                android:layout_height="100dp">
+                                android:layout_height="100dp"
+                                android:background="@drawable/kupon_belanja1">
 
                             </RelativeLayout>
 
@@ -832,7 +857,8 @@
 
                             <RelativeLayout
                                 android:layout_width="180dp"
-                                android:layout_height="100dp">
+                                android:layout_height="100dp"
+                                android:background="@drawable/kupon_belanja1">
 
                             </RelativeLayout>
                         </LinearLayout>
@@ -848,7 +874,8 @@
 
                             <RelativeLayout
                                 android:layout_width="180dp"
-                                android:layout_height="100dp">
+                                android:layout_height="100dp"
+                                android:background="@drawable/kupon_belanja2">
 
                             </RelativeLayout>
 
@@ -858,7 +885,8 @@
 
                             <RelativeLayout
                                 android:layout_width="180dp"
-                                android:layout_height="100dp">
+                                android:layout_height="100dp"
+                                android:background="@drawable/kupon_belanja2">
 
                             </RelativeLayout>
                         </LinearLayout>

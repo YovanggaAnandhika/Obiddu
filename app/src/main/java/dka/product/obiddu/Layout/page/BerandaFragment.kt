@@ -1,6 +1,7 @@
 package dka.product.obiddu.Layout.page
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +12,7 @@ import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.denzcoskun.imageslider.models.SlideModel
+import com.google.android.material.appbar.AppBarLayout
 import dka.product.obiddu.Layout.BlankFragmentExample
 import dka.product.obiddu.Layout.page.sub.beranda.ChildAllProduct
 import dka.product.obiddu.R
@@ -20,8 +22,9 @@ import dka.product.obiddu.Layout.page.sub.beranda.ChildPromoBanner
 import dka.product.obiddu.src.entity.AllProductGridEntity
 import dka.product.obiddu.src.models.adapter.recycleview.*
 
-class BerandaFragment : Fragment() {
+class BerandaFragment : Fragment(), AppBarLayout.OnOffsetChangedListener {
 
+    private var mSearchBarState : Boolean = false
 
     private var mAdapterPilihan : MutableList<mModelFragmentPilihan> = mutableListOf()
     private var mAdapterPromo : MutableList<mModelBannerPromo> = mutableListOf()
@@ -87,6 +90,10 @@ class BerandaFragment : Fragment() {
         imageSlider.add(SlideModel( imageUrl = "https://www.smartfren.com/Article/July%202019/Aplikasi%20Belajar%20Online%20Untuk%20Pelajar/image-thumb__625__auto_1f891bd5eb142807016c2634ecc9a380/aplikasi-belajar-online-opt-2.webp", ScaleTypes.FIT))
 
         mBinding.imageSlide.setImageList(imageSlider)*/
+
+        mBinding.apply {
+            mAppBarLayout.addOnOffsetChangedListener(this@BerandaFragment)
+        }
 
         //######################################################################################
 
@@ -169,16 +176,16 @@ class BerandaFragment : Fragment() {
 
             mData.apply {
                 clear()
-                add(menuFitur.mIcon(R.drawable.gift, "Hadiah Cash"))
-                add(menuFitur.mIcon(R.drawable.loss, "Murah Lebay"))
+                add(menuFitur.mIcon(R.drawable.gift, "Obiddu Stiker"))
+                add(menuFitur.mIcon(R.drawable.loss, "Murah Greget"))
                 add(menuFitur.mIcon(R.drawable.handphones, "Pulsa, Tagihan & Hiburan"))
-                add(menuFitur.mIcon(R.drawable.location_pin, "Mall"))
-                add(menuFitur.mIcon(R.drawable.delivery, "Gratis Ongkir Extra"))
+                add(menuFitur.mIcon(R.drawable.location_pin, "Official Store"))
+                add(menuFitur.mIcon(R.drawable.delivery, "Gratis Ongkir"))
                 add(menuFitur.mIcon(R.drawable.cashback, "Cashback & Voucher"))
                 add(menuFitur.mIcon(R.drawable.hot_sale, "Hot Sale"))
-                add(menuFitur.mIcon(R.drawable.order_food, "Transaksi Makanan"))
-                add(menuFitur.mIcon(R.drawable.electronics, "Elektronik"))
-                add(menuFitur.mIcon(R.drawable.deal, "deals"))
+                add(menuFitur.mIcon(R.drawable.order_food, "Obiddu Library"))
+                add(menuFitur.mIcon(R.drawable.electronics, "COD"))
+                add(menuFitur.mIcon(R.drawable.deal, "Nearby"))
             }
             adapter.dataBaru(mData)
         }
@@ -232,6 +239,25 @@ class BerandaFragment : Fragment() {
 
         override fun getPageTitle(position: Int): CharSequence? {
             return mAdapterAllProduct[position].mTitle
+        }
+    }
+
+    override fun onOffsetChanged(appBarLayout: AppBarLayout?, verticalOffset: Int) {
+        if (verticalOffset == 0 || (verticalOffset * -1) <= 320){
+            mBinding.mSafeAreaToolbar.setBackgroundColor(resources.getColor(android.R.color.transparent))
+            mBinding.mSearchBar.setBackgroundColor(resources.getColor(android.R.color.transparent))
+        }else{
+            if ((verticalOffset * -1) >= (mBinding.mCollapseToolbarLayout.height - 90)){
+                mBinding.mContainerToolbarAtas.visibility = View.GONE
+                mBinding.mContainerToolbarBawah.visibility = View.VISIBLE
+            }else{
+                mBinding.mSafeAreaToolbar.setBackgroundResource(R.drawable.beranda_gradient_background)
+                mBinding.mSearchBar.setBackgroundResource(R.drawable.beranda_gradient_background)
+
+                mBinding.mContainerToolbarAtas.visibility = View.VISIBLE
+                mBinding.mContainerToolbarBawah.visibility = View.GONE
+            }
+
         }
     }
 }

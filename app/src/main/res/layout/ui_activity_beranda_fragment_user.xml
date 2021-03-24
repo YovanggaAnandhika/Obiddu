@@ -33,6 +33,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
                         android:orientation="vertical"
                         android:visibility="visible">
 
@@ -41,11 +42,13 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="20dp"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            android:weightSum="10">
 
                             <RelativeLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="0.2"
                                 android:background="@drawable/cardview_profil">
 
                                 <LinearLayout
@@ -63,7 +66,7 @@
                                         android:textSize="12sp" />
 
                                     <Space
-                                        android:layout_width="20dp"
+                                        android:layout_width="15dp"
                                         android:layout_height="wrap_content" />
 
                                     <ImageButton
@@ -78,54 +81,37 @@
 
                             </RelativeLayout>
 
-                            <RelativeLayout
+                            <Space
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
+                                android:layout_height="match_parent"
+                                android:layout_weight="8" />
 
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_alignParentRight="true"
-                                    android:layout_marginEnd="10dp"
-                                    android:layout_marginRight="10dp"
-                                    android:orientation="horizontal">
+                            <ImageButton
+                                android:id="@+id/imageButton14"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:background="@null"
+                                android:tint="@color/white"
+                                app:srcCompat="@drawable/icon_keranjang" />
 
-                                    <ImageButton
-                                        android:id="@+id/imageButton12"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:background="@null"
-                                        android:tint="@color/white"
-                                        app:srcCompat="@drawable/icon_toko"
-                                        tools:ignore="VectorDrawableCompat" />
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:background="@null"
+                                android:tint="@color/white"
+                                app:srcCompat="@drawable/chat_bubbles_with_ellipsis" />
 
-                                    <Space
-                                        android:layout_width="10dp"
-                                        android:layout_height="wrap_content" />
-
-                                    <ImageButton
-                                        android:id="@+id/imageButton14"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:background="@null"
-                                        android:tint="@color/white"
-                                        app:srcCompat="@drawable/icon_keranjang" />
-
-                                    <Space
-                                        android:layout_width="10dp"
-                                        android:layout_height="wrap_content"
-                                        android:layout_weight="1" />
-
-                                    <ImageButton
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:background="@null"
-                                        android:tint="@color/white"
-                                        app:srcCompat="@drawable/chat_bubbles_with_ellipsis" />
-
-                                </LinearLayout>
-
-                            </RelativeLayout>
+                            <ImageButton
+                                android:id="@+id/imageButton12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.5"
+                                android:background="@null"
+                                android:tint="@color/white"
+                                app:srcCompat="@drawable/icon_toko"
+                                tools:ignore="VectorDrawableCompat" />
 
                         </LinearLayout>
 
@@ -164,7 +150,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="Nama Toko"
                                     android:textColor="#FFFFFF"
-                                    android:textSize="18sp"
+                                    android:textSize="14sp"
                                     android:textStyle="bold" />
 
                                 <Space
@@ -190,7 +176,8 @@
                                             android:id="@+id/textView55"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="Member Classic" />
+                                            android:text="Member Classic"
+                                            android:textSize="12sp" />
 
                                         <Space
                                             android:layout_width="10dp"
@@ -217,118 +204,11 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="pengikut 1200"
-                                    android:textColor="#FFFFFF" />
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="12sp" />
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/mWishList"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/imageView10"
-                        android:layout_margin="10dp"
-                        android:visibility="visible"
-                        app:cardCornerRadius="10dp"
-                        app:contentPadding="10dp">
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center_horizontal"
-                            android:orientation="horizontal">
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:orientation="vertical"
-                                android:weightSum="3">
-
-                                <ImageButton
-
-                                    android:layout_width="30dp"
-                                    android:layout_height="30dp"
-                                    android:layout_gravity="center_horizontal"
-                                    android:background="@null"
-                                    android:scaleType="fitXY"
-                                    android:tint="#000"
-                                    app:srcCompat="@drawable/ic_baseline_favorite_24" />
-
-                                <Space
-                                    android:layout_width="match_parent"
-                                    android:layout_height="10dp" />
-
-                                <TextView
-
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="WishList" />
-                            </LinearLayout>
-
-                            <Space
-                                android:layout_width="70dp"
-                                android:layout_height="match_parent" />
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
-
-                                <ImageButton
-
-                                    android:layout_width="30dp"
-                                    android:layout_height="30dp"
-                                    android:layout_gravity="center_horizontal"
-                                    android:background="@null"
-                                    android:scaleType="fitXY"
-                                    android:tint="#000"
-                                    app:srcCompat="@drawable/gift" />
-
-                                <Space
-                                    android:layout_width="match_parent"
-                                    android:layout_height="10dp" />
-
-                                <TextView
-
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Hadiah" />
-                            </LinearLayout>
-
-                            <Space
-                                android:layout_width="70dp"
-                                android:layout_height="match_parent" />
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:orientation="vertical">
-
-                                <ImageButton
-
-                                    android:layout_width="30dp"
-                                    android:layout_height="30dp"
-                                    android:layout_gravity="center_horizontal"
-                                    android:layout_weight="1"
-                                    android:background="@null"
-                                    android:scaleType="fitXY"
-                                    android:tint="#000"
-                                    app:srcCompat="@drawable/chat_bubbles_with_ellipsis" />
-
-                                <Space
-                                    android:layout_width="match_parent"
-                                    android:layout_height="10dp" />
-
-                                <TextView
-
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Pesanan" />
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                    </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/mPesanan"
@@ -407,113 +287,111 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:orientation="horizontal"
+                                android:weightSum="20">
 
                                 <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:orientation="vertical">
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="5"
+                                    android:orientation="vertical"
+                                    android:weightSum="10">
 
                                     <ImageView
                                         android:id="@+id/imageView11"
-                                        android:layout_width="40dp"
+                                        android:layout_width="30dp"
                                         android:layout_height="40dp"
                                         android:layout_gravity="center_horizontal"
+                                        android:layout_weight="6"
                                         app:srcCompat="@drawable/wallet" />
-
-                                    <Space
-                                        android:layout_width="match_parent"
-                                        android:layout_height="10dp" />
 
                                     <TextView
                                         android:id="@+id/textView58"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
+                                        android:layout_weight="3"
                                         android:gravity="center_horizontal"
                                         android:text="Belum Bayar"
                                         android:textSize="10sp" />
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:orientation="vertical">
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="5"
+                                    android:orientation="vertical"
+                                    android:weightSum="10">
 
                                     <ImageView
                                         android:id="@+id/imageView14"
-                                        android:layout_width="40dp"
+                                        android:layout_width="30dp"
                                         android:layout_height="40dp"
                                         android:layout_gravity="center_horizontal"
+                                        android:layout_weight="6"
+                                        android:scaleType="fitCenter"
                                         android:tint="#000"
                                         app:srcCompat="@drawable/deliverypackage" />
-
-                                    <Space
-                                        android:layout_width="match_parent"
-                                        android:layout_height="10dp" />
 
                                     <TextView
                                         android:id="@+id/textView59"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
+                                        android:layout_weight="3"
                                         android:gravity="center_horizontal"
                                         android:text="Pesanan Dikemas"
                                         android:textSize="10sp" />
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:orientation="vertical">
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="5"
+                                    android:orientation="vertical"
+                                    android:weightSum="10">
 
                                     <ImageView
                                         android:id="@+id/imageView15"
-                                        android:layout_width="40dp"
+                                        android:layout_width="30dp"
                                         android:layout_height="40dp"
                                         android:layout_gravity="center_horizontal"
-                                        android:scaleType="fitXY"
+                                        android:layout_weight="6"
+                                        android:scaleType="fitCenter"
                                         app:srcCompat="@drawable/delivery" />
-
-                                    <Space
-                                        android:layout_width="match_parent"
-                                        android:layout_height="10dp" />
 
                                     <TextView
                                         android:id="@+id/textView60"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
+                                        android:layout_weight="3"
                                         android:gravity="center_horizontal"
                                         android:text="Pesanan Dikirim"
                                         android:textSize="10sp" />
                                 </LinearLayout>
 
                                 <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:orientation="vertical">
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="5"
+                                    android:orientation="vertical"
+                                    android:weightSum="10">
 
                                     <ImageView
                                         android:id="@+id/imageView16"
-                                        android:layout_width="40dp"
-                                        android:layout_height="40dp"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
                                         android:layout_gravity="center_horizontal"
-                                        android:scaleType="fitXY"
+                                        android:layout_weight="6"
+                                        android:scaleType="fitCenter"
                                         app:srcCompat="@drawable/deal" />
-
-                                    <Space
-                                        android:layout_width="match_parent"
-                                        android:layout_height="10dp" />
 
                                     <TextView
                                         android:id="@+id/textView61"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_weight="3"
                                         android:gravity="center_horizontal"
                                         android:text="Pesanan Diterima"
                                         android:textSize="10sp" />
@@ -521,6 +399,132 @@
                             </LinearLayout>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/mWishList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imageView10"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="visible"
+                        app:cardCornerRadius="10dp"
+                        app:contentPadding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                tools:ignore="UnusedAttribute">
+
+                                <ImageButton
+
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_weight="5"
+                                    android:background="@null"
+                                    android:scaleType="centerCrop"
+                                    android:tint="#000"
+                                    app:srcCompat="@drawable/ic_baseline_favorite_24" />
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="5"
+                                    android:gravity="center"
+                                    android:text="WishList"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                tools:ignore="UnusedAttribute">
+
+                                <ImageButton
+
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_weight="10"
+                                    android:background="@null"
+                                    android:scaleType="fitCenter"
+                                    android:tint="@color/black"
+                                    app:srcCompat="@drawable/gift" />
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="5"
+                                    android:gravity="center"
+                                    android:text="Hadiah"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:clickable="true"
+                                android:focusable="true"
+                                tools:ignore="UnusedAttribute">
+
+                                <ImageButton
+
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_weight="1"
+                                    android:background="@null"
+                                    android:scaleType="centerCrop"
+                                    android:tint="#000"
+                                    app:srcCompat="@drawable/chat_bubbles_with_ellipsis" />
+
+                                <Space
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content" />
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Pesanan"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/mObiddu"
@@ -532,54 +536,56 @@
                         android:layout_marginEnd="10dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginBottom="10dp"
-                        android:visibility="visible">
+                        android:visibility="visible"
+                        app:cardCornerRadius="10dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:weightSum="8">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:orientation="horizontal"
-                                android:padding="5dp">
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:orientation="vertical"
+                                tools:ignore="UnusedAttribute">
 
-                                <ImageButton
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:padding="5dp">
 
-                                    android:layout_width="30dp"
-                                    android:layout_height="30dp"
-                                    android:background="@null"
-                                    android:scaleType="fitXY"
-                                    android:tint="#000"
-                                    app:srcCompat="@drawable/deal" />
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
 
-                                <Space
-                                    android:layout_width="10dp"
-                                    android:layout_height="wrap_content" />
+                                        <ImageView
+                                            android:layout_width="30dp"
+                                            android:layout_height="match_parent"
+                                            android:padding="5dp"
+                                            app:srcCompat="@drawable/star1" />
 
-                                <TextView
+                                        <Space
+                                            android:layout_width="10dp"
+                                            android:layout_height="match_parent" />
 
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center_vertical"
-                                    android:text="Penawaran Terbaik"
-                                    android:textSize="14sp" />
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:gravity="center"
+                                            android:text="Favorit Saya"
+                                            android:textSize="12sp" />
+                                    </LinearLayout>
 
-                                <Space
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1" />
+                                </RelativeLayout>
 
-                                <ImageButton
-
-                                    android:layout_width="30dp"
-                                    android:layout_height="match_parent"
-                                    android:background="@null"
-                                    android:scaleType="fitCenter"
-                                    android:tint="@color/black"
-                                    app:srcCompat="@drawable/right_arrow__1_" />
                             </LinearLayout>
 
                             <Space
@@ -590,7 +596,9 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
-                                android:orientation="horizontal">
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:weightSum="4">
 
                                 <Space
                                     android:layout_width="10dp"
@@ -718,11 +726,6 @@
 
                                 </LinearLayout>
 
-                                <Space
-                                    android:layout_width="10dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1" />
-
                             </LinearLayout>
 
                             <Space
@@ -731,238 +734,208 @@
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                android:padding="10dp">
-
-                                <ImageButton
-
-                                    android:layout_width="30dp"
-                                    android:layout_height="30dp"
-                                    android:background="@null"
-                                    android:scaleType="fitXY"
-                                    android:tint="#000"
-                                    app:srcCompat="@drawable/ic_baseline_favorite_24" />
-
-                                <Space
-                                    android:layout_width="10dp"
-                                    android:layout_height="wrap_content" />
-
-                                <TextView
-
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Favorit Saya"
-                                    android:textSize="18sp" />
-
-                                <Space
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1" />
-
-                                <ImageButton
-
-                                    android:layout_width="30dp"
-                                    android:layout_height="match_parent"
-                                    android:background="@null"
-                                    android:scaleType="fitCenter"
-                                    android:tint="@color/black"
-                                    app:srcCompat="@drawable/right_arrow__1_" />
-                            </LinearLayout>
-
-                            <View
-                                android:id="@+id/view4"
-                                android:layout_width="match_parent"
-                                android:layout_height="2dp"
-                                android:background="#CDC9C9" />
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:orientation="horizontal"
-                                android:padding="10dp">
+                                android:orientation="vertical">
 
-                                <ImageButton
-
-                                    android:layout_width="30dp"
-                                    android:layout_height="match_parent"
-                                    android:background="@null"
-                                    android:scaleType="fitXY"
-                                    android:tint="#000"
-                                    app:srcCompat="@drawable/star" />
-
-                                <Space
-                                    android:layout_width="wrap_content"
+                                <LinearLayout
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_weight="1" />
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:foreground="?android:attr/selectableItemBackground"
+                                    android:orientation="vertical"
+                                    tools:ignore="UnusedAttribute">
 
-                                <TextView
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="45dp"
+                                        android:padding="5dp">
 
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="3"
-                                    android:text="Penilaian Saya"
-                                    android:textSize="18sp" />
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
 
-                                <Space
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1" />
+                                            <ImageView
+                                                android:layout_width="30dp"
+                                                android:layout_height="match_parent"
+                                                android:padding="5dp"
+                                                app:srcCompat="@drawable/star1" />
 
-                                <ImageButton
+                                            <Space
+                                                android:layout_width="10dp"
+                                                android:layout_height="match_parent" />
 
-                                    android:layout_width="40dp"
-                                    android:layout_height="match_parent"
-                                    android:background="@null"
-                                    android:scaleType="fitCenter"
-                                    android:tint="@color/black"
-                                    app:srcCompat="@drawable/right_arrow__1_" />
-                            </LinearLayout>
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:gravity="center"
+                                                android:text="Favorit Saya"
+                                                android:textSize="12sp" />
+                                        </LinearLayout>
 
-                            <View
-                                android:id="@+id/view5"
-                                android:layout_width="match_parent"
-                                android:layout_height="2dp"
-                                android:background="#CDC9C9" />
+                                        <ImageButton
+                                            android:layout_width="40dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_alignParentRight="true"
+                                            android:background="@null"
+                                            android:padding="10dp"
+                                            android:scaleType="centerCrop"
+                                            android:tint="@android:color/darker_gray"
+                                            app:srcCompat="@drawable/right_arrow__1_" />
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                android:padding="10dp"
-                                android:weightSum="5">
+                                    </RelativeLayout>
 
-                                <ImageButton
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:background="@android:color/darker_gray" />
 
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:background="@null"
-                                    android:scaleType="fitXY"
-                                    android:tint="#000"
-                                    app:srcCompat="@drawable/dollar_coin" />
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="45dp"
+                                        android:padding="5dp">
 
-                                <Space
-                                    android:layout_width="10dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1" />
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
 
-                                <TextView
+                                            <ImageView
+                                                android:layout_width="30dp"
+                                                android:layout_height="match_parent"
+                                                android:padding="5dp"
+                                                app:srcCompat="@drawable/star1" />
 
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="Obiddu Coins"
-                                    android:textSize="18sp" />
+                                            <Space
+                                                android:layout_width="10dp"
+                                                android:layout_height="match_parent" />
 
-                                <Space
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1" />
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:gravity="center"
+                                                android:text="Favorit Saya"
+                                                android:textSize="12sp" />
+                                        </LinearLayout>
 
-                                <ImageButton
+                                        <ImageButton
+                                            android:layout_width="40dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_alignParentRight="true"
+                                            android:background="@null"
+                                            android:padding="10dp"
+                                            android:scaleType="centerCrop"
+                                            android:tint="@android:color/darker_gray"
+                                            app:srcCompat="@drawable/right_arrow__1_" />
 
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:background="@null"
-                                    android:scaleType="fitCenter"
-                                    android:tint="@color/black"
-                                    app:srcCompat="@drawable/right_arrow__1_" />
-                            </LinearLayout>
+                                    </RelativeLayout>
 
-                            <View
-                                android:id="@+id/view6"
-                                android:layout_width="match_parent"
-                                android:layout_height="2dp"
-                                android:background="#CDC9C9" />
+                                    <View
+                                        android:id="@+id/view6"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:background="@android:color/darker_gray" />
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="horizontal"
-                                android:padding="10dp">
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="45dp"
+                                        android:padding="5dp">
 
-                                <ImageButton
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
 
-                                    android:layout_width="40dp"
-                                    android:layout_height="match_parent"
-                                    android:background="@null"
-                                    android:scaleType="fitXY"
-                                    android:tint="#000"
-                                    app:srcCompat="@drawable/wallet" />
+                                            <ImageView
+                                                android:layout_width="30dp"
+                                                android:layout_height="match_parent"
+                                                android:padding="5dp"
+                                                app:srcCompat="@drawable/star1" />
 
-                                <Space
-                                    android:layout_width="10dp"
-                                    android:layout_height="wrap_content" />
+                                            <Space
+                                                android:layout_width="10dp"
+                                                android:layout_height="match_parent" />
 
-                                <TextView
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:gravity="center"
+                                                android:text="Favorit Saya"
+                                                android:textSize="12sp" />
+                                        </LinearLayout>
 
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Obiddu Cash"
-                                    android:textSize="18sp" />
+                                        <ImageButton
+                                            android:layout_width="40dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_alignParentRight="true"
+                                            android:background="@null"
+                                            android:padding="10dp"
+                                            android:scaleType="centerCrop"
+                                            android:tint="@android:color/darker_gray"
+                                            app:srcCompat="@drawable/right_arrow__1_" />
 
-                                <Space
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1" />
+                                    </RelativeLayout>
 
-                                <ImageButton
+                                    <View
+                                        android:id="@+id/view7"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:background="@android:color/darker_gray" />
 
-                                    android:layout_width="40dp"
-                                    android:layout_height="match_parent"
-                                    android:background="@null"
-                                    android:scaleType="fitCenter"
-                                    android:tint="@color/black"
-                                    app:srcCompat="@drawable/right_arrow__1_" />
-                            </LinearLayout>
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="45dp"
+                                        android:padding="5dp">
 
-                            <View
-                                android:id="@+id/view9"
-                                android:layout_width="match_parent"
-                                android:layout_height="2dp"
-                                android:background="#CDC9C9" />
+                                        <LinearLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="horizontal"
-                                android:padding="10dp">
+                                            <ImageView
+                                                android:layout_width="30dp"
+                                                android:layout_height="match_parent"
+                                                android:padding="5dp"
+                                                app:srcCompat="@drawable/star1" />
 
-                                <ImageButton
+                                            <Space
+                                                android:layout_width="10dp"
+                                                android:layout_height="match_parent" />
 
-                                    android:layout_width="40dp"
-                                    android:layout_height="match_parent"
-                                    android:background="@null"
-                                    android:scaleType="fitXY"
-                                    android:tint="#000"
-                                    app:srcCompat="@drawable/gift" />
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:gravity="center"
+                                                android:text="Favorit Saya"
+                                                android:textSize="12sp" />
+                                        </LinearLayout>
 
-                                <Space
-                                    android:layout_width="10dp"
-                                    android:layout_height="wrap_content" />
+                                        <ImageButton
+                                            android:layout_width="40dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_alignParentRight="true"
+                                            android:background="@null"
+                                            android:padding="10dp"
+                                            android:scaleType="centerCrop"
+                                            android:tint="@android:color/darker_gray"
+                                            app:srcCompat="@drawable/right_arrow__1_" />
 
-                                <TextView
+                                    </RelativeLayout>
 
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Hadiah Saya"
-                                    android:textSize="18sp" />
+                                    <View
+                                        android:id="@+id/view8"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:background="@android:color/darker_gray" />
 
-                                <Space
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1" />
+                                </LinearLayout>
 
-                                <ImageButton
 
-                                    android:layout_width="40dp"
-                                    android:layout_height="match_parent"
-                                    android:background="@null"
-                                    android:scaleType="fitCenter"
-                                    android:tint="@color/black"
-                                    app:srcCompat="@drawable/right_arrow__1_" />
                             </LinearLayout>
 
                         </LinearLayout>
@@ -986,140 +959,146 @@
                             android:orientation="vertical"
                             android:padding="10dp">
 
-                            <LinearLayout
+                            <RelativeLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="horizontal"
-                                android:padding="10dp">
+                                android:layout_height="45dp"
+                                android:padding="5dp">
 
-                                <ImageButton
-
-                                    android:layout_width="40dp"
-                                    android:layout_height="match_parent"
-                                    android:background="@null"
-                                    android:scaleType="fitXY"
-                                    android:tint="#000"
-                                    app:srcCompat="@drawable/icon_akun" />
-
-                                <Space
-                                    android:layout_width="10dp"
-                                    android:layout_height="wrap_content" />
-
-                                <TextView
-
+                                <LinearLayout
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Profil Setting"
-                                    android:textSize="18sp" />
+                                    android:orientation="horizontal">
 
-                                <Space
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1" />
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="match_parent"
+                                        android:padding="5dp"
+                                        app:srcCompat="@drawable/star1" />
+
+                                    <Space
+                                        android:layout_width="10dp"
+                                        android:layout_height="match_parent" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:text="Pengaturan Profil"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
 
                                 <ImageButton
-
                                     android:layout_width="40dp"
                                     android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
                                     android:background="@null"
-                                    android:scaleType="fitCenter"
-                                    android:tint="@color/black"
+                                    android:padding="10dp"
+                                    android:scaleType="centerCrop"
+                                    android:tint="@android:color/darker_gray"
                                     app:srcCompat="@drawable/right_arrow__1_" />
-                            </LinearLayout>
+
+                            </RelativeLayout>
 
                             <View
-                                android:id="@+id/view7"
+                                android:id="@+id/view9"
                                 android:layout_width="match_parent"
-                                android:layout_height="2dp"
-                                android:background="#CDC9C9" />
+                                android:layout_height="1dp"
+                                android:background="@android:color/darker_gray" />
 
-                            <LinearLayout
+                            <RelativeLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="horizontal"
-                                android:padding="10dp">
+                                android:layout_height="45dp"
+                                android:padding="5dp">
 
-                                <ImageButton
-
-                                    android:layout_width="40dp"
-                                    android:layout_height="match_parent"
-                                    android:background="@null"
-                                    android:scaleType="fitXY"
-                                    android:tint="#000"
-                                    app:srcCompat="@android:drawable/ic_menu_help" />
-
-                                <Space
-                                    android:layout_width="10dp"
-                                    android:layout_height="wrap_content" />
-
-                                <TextView
-
+                                <LinearLayout
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Pusat Bantuan"
-                                    android:textSize="18sp" />
+                                    android:orientation="horizontal">
 
-                                <Space
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1" />
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="match_parent"
+                                        android:padding="5dp"
+                                        app:srcCompat="@drawable/star1" />
+
+                                    <Space
+                                        android:layout_width="10dp"
+                                        android:layout_height="match_parent" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:text="Pilih Bahasa"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
 
                                 <ImageButton
-
                                     android:layout_width="40dp"
                                     android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
                                     android:background="@null"
-                                    android:scaleType="fitCenter"
-                                    android:tint="@color/black"
+                                    android:padding="10dp"
+                                    android:scaleType="centerCrop"
+                                    android:tint="@android:color/darker_gray"
                                     app:srcCompat="@drawable/right_arrow__1_" />
-                            </LinearLayout>
+
+                            </RelativeLayout>
 
                             <View
-                                android:id="@+id/view8"
+                                android:id="@+id/view12"
                                 android:layout_width="match_parent"
-                                android:layout_height="2dp"
-                                android:background="#CDC9C9" />
+                                android:layout_height="1dp"
+                                android:background="@android:color/darker_gray" />
 
-                            <LinearLayout
+                            <RelativeLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="horizontal"
-                                android:padding="10dp">
+                                android:layout_height="45dp"
+                                android:padding="5dp">
 
-                                <ImageButton
-
-                                    android:layout_width="40dp"
-                                    android:layout_height="match_parent"
-                                    android:background="@null"
-                                    android:scaleType="fitXY"
-                                    android:tint="#000"
-                                    app:srcCompat="@android:drawable/ic_menu_info_details" />
-
-                                <Space
-                                    android:layout_width="10dp"
-                                    android:layout_height="wrap_content" />
-
-                                <TextView
-
+                                <LinearLayout
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Saran Dan Kritik"
-                                    android:textSize="18sp" />
+                                    android:orientation="horizontal">
 
-                                <Space
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1" />
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="match_parent"
+                                        android:padding="5dp"
+                                        app:srcCompat="@drawable/star1" />
+
+                                    <Space
+                                        android:layout_width="10dp"
+                                        android:layout_height="match_parent" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:text="Help &amp; Support"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
 
                                 <ImageButton
-
                                     android:layout_width="40dp"
                                     android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
                                     android:background="@null"
-                                    android:scaleType="fitCenter"
-                                    android:tint="@color/black"
+                                    android:padding="10dp"
+                                    android:scaleType="centerCrop"
+                                    android:tint="@android:color/darker_gray"
                                     app:srcCompat="@drawable/right_arrow__1_" />
-                            </LinearLayout>
+
+                            </RelativeLayout>
+
+                            <View
+                                android:id="@+id/view13"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@android:color/darker_gray" />
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
